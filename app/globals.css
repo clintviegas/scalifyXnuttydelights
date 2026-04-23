@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --orange: #f05223;
+    --orange-dark: #c93e16;
+    --cream: #fffaf5;
+    --cream-dark: #f5ede3;
+    --black: #0a0a0a;
+    --border: #e5e0da;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #fffaf5;
+    color: #0a0a0a;
+    font-family: "Inter", system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background-color: #f05223;
+    color: #ffffff;
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #fffaf5; }
+  ::-webkit-scrollbar-thumb { background: #f05223; border-radius: 3px; }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background-color: #f05223;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(240, 82, 35, 0.3);
+  }
+  .btn-primary:hover {
+    background-color: #c93e16;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 32px rgba(240, 82, 35, 0.4);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background-color: transparent;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    border: 1.5px solid #e5e0da;
+    cursor: pointer;
+  }
+  .btn-secondary:hover { border-color: #f05223; color: #f05223; }
+
+  .card {
+    background: white;
+    border: 1px solid #e5e0da;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  }
 }
