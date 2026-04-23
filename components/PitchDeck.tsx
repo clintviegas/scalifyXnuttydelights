@@ -61,7 +61,8 @@ export function PitchDeck() {
 
           {/* PDF Download */}
           <a
-            href="/Scalify%20X%20Nutty%20Delights.pdf"
+            href="/Nutty%20Delights%20X%20Scalify.pdf"
+            download
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold tracking-wide bg-[#f05223] text-white shadow-[0_2px_8px_rgba(240,82,35,0.4)] hover:bg-[#c93e16] transition-all duration-150"
