@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   title: "Scalify X Nutty Delights",
   description: "Expand Your Business, Not Your Office. UAE's #1 end-to-end growth partner.",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/Scalify - Favicon.png",
+    apple: "/Scalify - Favicon.png",
   },
   openGraph: {
     title: "Scalify X Nutty Delights",
