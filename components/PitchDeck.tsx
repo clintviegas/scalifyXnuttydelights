@@ -61,7 +61,7 @@ export function PitchDeck() {
 
           {/* PDF Download */}
           <a
-            href="/NuttyDelights%20X%20Scalify.pdf"
+            href="/NuttyDelights%20X%20Scalify%20v2.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
